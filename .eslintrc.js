@@ -20,13 +20,18 @@
 
 module.exports = {
     extends: ['eslint:recommended'],
+    // 支持最新最终的ECMAscript标准
+    // eslint会对动态导入语法报错，修改eslint配置文件
+    parser: '@babel/eslint-parser',
     env: {
         node: true,
         browser: true,
+        es6: true
     },
+    plugins: ['import'], // 解决动态导入import语法报错问题 --> 实际使用eslint-plugin-import的规则解决的
     parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module',
+        ecmaVersion: 6, // es6
+        sourceType: 'module', // es module
     },
     rules: {
         'no-var': 2,

@@ -1,6 +1,18 @@
-.box1{
+.box1 {
     width: 100px;
     height: 100px;
     background-color: pink;
     transform: translate(10px);
+}
+
+.img1 {
+    width: 100px;
+    height: 100px;
+    background: url(../images/4.jpeg);
+}
+
+.img2 {
+    width: 100px;
+    height: 100px;
+    background: url(../images/5.gif);
 }
