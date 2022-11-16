@@ -17,6 +17,10 @@ module.exports = {
                 oneOf: [
                     //匹配一个loader，剩下的不匹配，节约时间
                     {
+                        test: /\.html$/i,
+                        use: ['html-loader'],
+                    },
+                    {
                         test: /\.css$/i,
                         use: ['style-loader', 'css-loader'],
                     },

@@ -47,6 +47,10 @@ module.exports = {
             {
                 oneOf: [
                     {
+                        test: /\.html$/i,
+                        use: ['html-loader'],
+                    },
+                    {
                         test: /\.css$/i,
                         use: getStyleLoaders(),
                     },
